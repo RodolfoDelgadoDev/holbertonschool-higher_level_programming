@@ -1,2 +1,2 @@
 #!/bin/bash
-import $PYFILE
+python3 -m "$PYFILE" "my_main.pyc"
