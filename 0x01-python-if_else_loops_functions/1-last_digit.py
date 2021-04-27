@@ -4,6 +4,7 @@ number = random.randint(-10000, 10000)
 if number < 0:
     num = number * (-1)
     last = num % 10
+    last = -1 * last
 else:
     last = number % 10
 six = "less than 6 and not 0"
