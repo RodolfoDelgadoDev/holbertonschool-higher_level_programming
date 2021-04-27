@@ -6,7 +6,7 @@ if number < 0:
     last = num % 10
 else:
     last = number % 10
-six = "is less than 6 and not 0"
+six = "less than 6 and not 0"
 if last > 5:
     print("Last digit of {} is {} and is greater than 5".format(number, last))
 elif last == 0:
