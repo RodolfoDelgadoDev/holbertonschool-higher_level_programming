@@ -2,7 +2,7 @@
 def delete_at(my_list=[], idx=0):
     if idx < 0:
         return my_list
-    elif idx > len(my_list) - 1:
+    elif idx > (len(my_list) - 1):
         return my_list
     dele = []
     for i in range(len(my_list)):
