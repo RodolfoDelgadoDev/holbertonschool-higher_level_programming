@@ -15,11 +15,10 @@ def roman_to_int(roman_string):
                 break
         if n < lon - 1:
             if ro.get(roman_string[n+1]) > ro.get(roman_string[n]):
-                con = con + ro.get(roman_string[n + 1]) - 1
+                con = con + ro.get(roman_string[n + 1]) - ro.get(roman_string[n])
                 rev = True
             else:
                 con = con + ro.get(roman_string[n])
         else:
             con = con + ro.get(roman_string[n])
-            rev = True
     return con
