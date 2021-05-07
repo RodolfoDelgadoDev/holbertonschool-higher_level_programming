@@ -1,17 +1,12 @@
 #!/usr/bin/python3
 def best_score(a_dictionary):
     if a_dictionary:
+        c = 0
         for i in a_dictionary:
-            a = a_dictionary[i]
-            a2 = i
-            for j in a_dictionary:
-                if a < a_dictionary[j]:
-                    b = a_dictionary[j]
-                    b2 = j
-                    break
-        if a < b:
-            return b2
-        else:
-            return a2
+            a = a_dictionary.get(i, a_dictionary[i])
+            if c < a:
+                cc = i
+                c = a
+        return cc
     else:
         return None
