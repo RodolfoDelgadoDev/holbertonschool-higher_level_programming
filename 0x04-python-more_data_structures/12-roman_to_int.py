@@ -21,4 +21,5 @@ def roman_to_int(roman_string):
                 con = con + ro.get(roman_string[n])
         else:
             con = con + ro.get(roman_string[n])
+            rev = True
     return con
