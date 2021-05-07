@@ -15,7 +15,8 @@ def roman_to_int(roman_string):
                 break
         if n < lon - 1:
             if ro.get(roman_string[n+1]) > ro.get(roman_string[n]):
-                con = con + ro.get(roman_string[n + 1]) - ro.get(roman_string[n])
+                var = ro.get(roman_string[n])
+                con = con + ro.get(roman_string[n + 1]) - var
                 rev = True
             else:
                 con = con + ro.get(roman_string[n])
