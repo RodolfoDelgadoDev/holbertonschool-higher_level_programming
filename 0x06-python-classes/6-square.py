@@ -21,6 +21,10 @@ class Square():
             raise TypeError("position must be a tuple of 2 positive integers")
         elif (ent1 is False) or (ent2 is False):
             raise TypeError("position must be a tuple of 2 positive integers")
+        elif position[0] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif position[1] < 0:
+            raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
     '''check area of a square'''
 
