@@ -9,12 +9,12 @@ class Square():
         check = isinstance(size, (int))
         ent1 = isinstance(position[0], int)
         ent2 = isinstance(position[1], int)
+        tu = isinstance(position, (tuple))
         if check is False:
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
         self.__size = size
-        tu = isinstance(position, (tuple))
         if tu is False:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif len(position) != 2:
