@@ -7,8 +7,6 @@ class Square():
 
     def __init__(self, size=0, position=(0, 0)):
         check = isinstance(size, (int))
-        ent1 = isinstance(position[0], int)
-        ent2 = isinstance(position[1], int)
         tu = isinstance(position, (tuple))
         if check is False:
             raise TypeError("size must be an integer")
@@ -19,7 +17,9 @@ class Square():
             raise TypeError("position must be a tuple of 2 positive integers")
         elif len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif (ent1 is False) or (ent2 is False):
+        entr1 = isinstance(position[1], (int))
+        entr2 = isinstance(position[0], (int))
+        if (entr1 is False) or (entr2 is False):
             raise TypeError("position must be a tuple of 2 positive integers")
         elif position[0] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
@@ -83,13 +83,13 @@ class Square():
     @position.setter
     def position(self, value):
         tu = isinstance(value, (tuple))
-        entr1 = isinstance(value[1], (int))
-        entr2 = isinstance(value[0], (int))
         if tu is False:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif len(value) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif entr1 is False or entr2 is False:
+        entr1 = isinstance(value[1], (int))
+        entr2 = isinstance(value[0], (int))
+        if entr1 is False or entr2 is False:
             raise TypeError("position must be a tuple of 2 positive integers")
         elif value[1] < 0:
             raise TypeError("position must be a tuple of 2 positive integers")
