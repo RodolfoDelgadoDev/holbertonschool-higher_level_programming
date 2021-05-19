@@ -72,7 +72,6 @@ class Square():
                         c += 1
                 else:
                     print("#", end="")
-
     ''' def retrive position'''
 
     @property
