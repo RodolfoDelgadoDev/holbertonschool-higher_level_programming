@@ -17,7 +17,7 @@ class Square():
         tu = isinstance(position, (tuple))
         if tu is False or len(position) != 2:
             raise TypeError("position must be a tuple of 2 positive integers")
-        elif (ent1 is False) or (ent2 is False):
+        if (ent1 is False) or (ent2 is False):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = position
     '''check area of a square'''
