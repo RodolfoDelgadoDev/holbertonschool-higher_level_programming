@@ -1,4 +1,73 @@
->>> from 0-add_integer.py import add_integer
+ The 0-add_integer module
+======================
+
+ Using add
+-------------------
+
+>>> add_integer = __import__("0-add_integer").add_integer 
+
+=========================================================
+
+ Test zone
+
+=========================================================
+
 
 >>> add_integer(1, 1)
 2
+
+--------------------
+
+>>> add_integer(3, 2)
+5
+
+--------------------
+
+>>> add_integer(1, 1)
+2
+
+--------------------
+
+>>> add_integer(-1, 1)
+0
+
+--------------------
+
+>>> add_integer(None, None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+
+--------------------
+--------------------
+
+
+>>> add_integer('b', )
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+--------------------
+
+>>> add_integer(True, False)
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+--------------------
+
+>>> add_integer(777, False)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+--------------------
+
+>>> add_integer(777, "bokita")
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+--------------------
+
+>>> add_integer(2, )
+100
+
+--------------------
+--------------------
