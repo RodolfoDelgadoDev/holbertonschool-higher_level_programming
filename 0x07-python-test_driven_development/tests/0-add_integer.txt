@@ -1,0 +1,4 @@
+>>> from 0-add_integer.py import add_integer
+
+>>> add_integer(1, 1)
+2
