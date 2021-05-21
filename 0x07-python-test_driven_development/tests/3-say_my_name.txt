@@ -29,8 +29,8 @@ TypeError: last_name must be a string
 
 --------------------
 
->>> say_my_name("", )
-My name is 
+>>> say_my_name("")
+My name is  
 
 --------------------
 
@@ -48,8 +48,8 @@ TypeError: first_name must be a string
 
 --------------------
 
->>> say_my_name("Bokita", )
-My name is Bokita
+>>> say_my_name("Bokita")
+My name is Bokita 
 
 --------------------
 
