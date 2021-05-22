@@ -3,7 +3,7 @@
 
 
 def text_indentation(text):
-    '''function that if in a string there is a . ? or : makes 2 new lines''' 
+    '''function that if in a string there is a . ? or : makes 2 new lines'''
     if type(text) is not str:
         raise TypeError("text must be a string")
     s = ['.', '?', ':']
