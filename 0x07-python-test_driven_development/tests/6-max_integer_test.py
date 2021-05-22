@@ -18,3 +18,6 @@ class TestMaxInteger(unittest.TestCase):
         self.assertEqual([-1, -2, -3], -1)
         self.assertEqual([1, 2, -1, 3], 3)
         self.assertEqual([-1, 0, -3, 5], 5)
+
+if __name__ == '__main__':
+    unittest.main()
