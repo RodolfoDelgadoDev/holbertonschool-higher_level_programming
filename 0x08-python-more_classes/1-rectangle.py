@@ -2,7 +2,7 @@
 ''' Functions '''
 
 
-class Rectangle():
+class Rectangle:
     '''class Rectangle'''
 
     def __init__(self, width=0, height=0):
@@ -31,7 +31,7 @@ class Rectangle():
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    '''def setter width'''
+    '''def setter height'''
 
     @height.setter
     def height(self, value):
