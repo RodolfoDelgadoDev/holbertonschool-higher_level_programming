@@ -62,9 +62,9 @@ class Rectangle():
         if self.__height == 0 or self.__width == 0:
             return ""
         are = self.__height * self.__width
-        cad = "#" * self.__width
-        for i in range(1, are - self.__width):
-            cad = cad + '\n'
+        cad = ""
+        for i in range(self.__height):
             cad = cad + ("#" * self.__width)
+            if i != self.__height - 1:
+                cad = cad + '\n'
         return cad
-
