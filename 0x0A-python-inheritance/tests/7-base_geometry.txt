@@ -25,6 +25,14 @@ ValueError: A must be greater than 0
 
 -------------------------------------------
 
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("A", 0)
+Traceback (most recent call last):
+ValueError: A must be greater than 0
+
+-------------------------------------------
+
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("Berenjena", a)
 Traceback (most recent call last):
@@ -78,5 +86,39 @@ TypeError: integer_validator() missing 1 required positional argument: 'value'
 >>> bg.integer_validator(a, )
 Traceback (most recent call last):
 NameError: name 'a' is not defined
+
+-------------------------------------------
+>>> bg = BaseGeometry()
+>>> bg.integer_validator()
+Traceback (most recent call last):
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator(,)
+Traceback (most recent call last):
+SyntaxError: invalid syntax
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", None)
+Traceback (most recent call last):
+TypeError: Berenjena must be an integer
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.area(pichula)
+Traceback (most recent call last):
+NameError: name 'pichula' is not defined
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.area("bokita")
+Traceback (most recent call last):
+TypeError: area() takes 1 positional argument but 2 were given
 
 -------------------------------------------
