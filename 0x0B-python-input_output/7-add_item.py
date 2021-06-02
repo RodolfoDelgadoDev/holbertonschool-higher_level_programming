@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' File '''
+''' File add item '''
 
 
 import sys
@@ -9,7 +9,7 @@ from load_from_json_file import load_from_json_file
 
 
 File = 'add_item.json'
-if os.path.exists(File):
+if os.path.isfile(File):
     obj = load_from_json_file(File)
 else:
     obj = []
