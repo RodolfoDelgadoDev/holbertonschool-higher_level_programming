@@ -133,7 +133,7 @@ Exception: area() is not implemented
 >>> bg = BaseGeometry()
 >>> bg.area(0)
 Traceback (most recent call last):
-Exception: area() is not implemented
+TypeError: area() takes 1 positional argument but 2 were given
 
 -------------------------------------------
 
