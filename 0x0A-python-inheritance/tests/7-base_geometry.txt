@@ -36,7 +36,38 @@
 
 -------------------------------------------
 
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", [1, 2])
+[ValueError] Berenjena must be an integer
 
+-------------------------------------------
 
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", (1, 2))
+[ValueError] Berenjena must be an integer
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", {'a': '1'})
+[ValueError] Berenjena must be an integer
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", "fuamaster")
+[ValueError] Berenjena must be an integer
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", )
+[TypeError] integer_validator() missing 1 required positional argument: 'value'
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator(a, )
+[NameError] name 'a' is not defined
 
 -------------------------------------------
