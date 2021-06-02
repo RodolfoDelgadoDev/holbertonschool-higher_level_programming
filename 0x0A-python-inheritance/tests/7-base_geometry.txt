@@ -20,54 +20,63 @@
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("A", -1)
-[ValueError] A must be greater than 0
+Traceback (most recent call last):
+ValueError: A must be greater than 0
 
 -------------------------------------------
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("Berenjena", a)
-[TypeError] Berenjena must be an integer
+Traceback (most recent call last):
+NameError: name 'a' is not defined
 
 -------------------------------------------
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("Berenjena", 3.2)
-[ValueError] Berenjena must be an integer
+Traceback (most recent call last):
+TypeError: Berenjena must be an integer
 
 -------------------------------------------
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("Berenjena", [1, 2])
-[ValueError] Berenjena must be an integer
+Traceback (most recent call last):
+TypeError: Berenjena must be an integer
 
 -------------------------------------------
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("Berenjena", (1, 2))
-[ValueError] Berenjena must be an integer
+Traceback (most recent call last):
+TypeError: Berenjena must be an integer
 
 -------------------------------------------
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("Berenjena", {'a': '1'})
-[ValueError] Berenjena must be an integer
+Traceback (most recent call last):
+TypeError: Berenjena must be an integer
 
 -------------------------------------------
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("Berenjena", "fuamaster")
-[ValueError] Berenjena must be an integer
+Traceback (most recent call last):
+TypeError: Berenjena must be an integer
 
 -------------------------------------------
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("Berenjena", )
-[TypeError] integer_validator() missing 1 required positional argument: 'value'
+Traceback (most recent call last):
+TypeError: integer_validator() missing 1 required positional argument: 'value'
 
 -------------------------------------------
 
 >>> bg = BaseGeometry()
 >>> bg.integer_validator(a, )
-[NameError] name 'a' is not defined
+Traceback (most recent call last):
+NameError: name 'a' is not defined
 
 -------------------------------------------
