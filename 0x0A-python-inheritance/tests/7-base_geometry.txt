@@ -1,0 +1,38 @@
+ The 7-base_geometry module
+======================
+
+ Using BaseGeometry
+-------------------
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+=========================================================
+
+ Test zone
+
+=========================================================
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("A", 12)
+
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("A", -1)
+[ValueError] A must be greater than 0
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", a)
+[TypeError] Berenjena must be an integer
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", 3.2)
+[ValueError] Berenjena must be greater than 0
+
+-------------------------------------------
+-------------------------------------------
