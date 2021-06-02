@@ -18,4 +18,3 @@ for i in range(1, len(sys.argv)):
     my_list.append(sys.argv[i])
 
 save_to_json_file(my_list, myfile)
-
