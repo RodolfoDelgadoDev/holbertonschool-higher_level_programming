@@ -143,3 +143,18 @@ Traceback (most recent call last):
 TypeError: Berenjena must be an integer
 
 -------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", (1,))
+Traceback (most recent call last):
+TypeError: Berenjena must be an integer
+
+-------------------------------------------
+
+>>> bg = BaseGeometry()
+>>> bg.integer_validator("Berenjena", [1])
+Traceback (most recent call last):
+TypeError: Berenjena must be an integer
+
+-------------------------------------------
+-------------------------------------------
