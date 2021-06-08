@@ -20,8 +20,9 @@ class Base:
     ''' to json string '''
 
     def to_json_string(list_dictionaries):
-        ''' to json string '''
+        ''' to json s '''
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
         else:
-            return json.dumps(list_dictionaries)
+            j = json.dumps(list_dictionaries)
+            return j
