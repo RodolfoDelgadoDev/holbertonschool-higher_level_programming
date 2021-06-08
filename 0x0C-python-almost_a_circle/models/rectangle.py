@@ -87,10 +87,15 @@ class Rectangle(Base):
     def display(self):
         are = self.height * self.width
         c = 1
+        sp = " " * self.x
+        sal = "\n" * self.y
+        print(sal, end="")
+        print(sp, end="")
         for i in range(1, are + 1):
             if self.width * c == i:
                 print("#")
                 c += 1
+                print(sp, end="")
             else:
                 print("#", end="")
 
