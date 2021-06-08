@@ -27,6 +27,8 @@ class TestBase(unittest.TestCase):
         b = Base(-3)
         self.assertEqual(b.id, -3)
 
+    ''' Test Task 1 '''
+
      def test_BaseEmpty(self):
         ''' test '''
         b = Base()
