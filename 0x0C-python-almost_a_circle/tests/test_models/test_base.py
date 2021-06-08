@@ -27,5 +27,10 @@ class TestBase(unittest.TestCase):
         b = Base(-3)
         self.assertEqual(b.id, -3)
 
+     def test_BaseEmpty(self):
+        ''' test '''
+        b = Base()
+        self.assertEqual(b.id, 1)
+
 if __name__ == '__main__':
     unittest.main()
