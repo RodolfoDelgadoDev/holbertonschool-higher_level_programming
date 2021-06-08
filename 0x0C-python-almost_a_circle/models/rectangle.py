@@ -8,6 +8,7 @@ from models.base import Base
 class Rectangle(Base):
     ''' Rectangle using base '''
     def __init__(self, width, height, x=0, y=0, id=None):
+        ''' init '''
         super().__init__(id)
         self.width = width
         self.height = height
@@ -18,12 +19,14 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        ''' width '''
         return self.__width
 
     ''' setter width '''
 
     @width.setter
     def width(self, value):
+        ''' width '''
         if type(value) is not int:
             raise TypeError("width must be an integer")
         elif value <= 0:
@@ -34,12 +37,14 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        ''' height '''
         return self.__height
 
     ''' setter height '''
 
     @height.setter
     def height(self, value):
+        ''' height '''
         if type(value) is not int:
             raise TypeError("height must be an integer")
         elif value <= 0:
@@ -50,12 +55,14 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        ''' x '''
         return self.__x
 
     ''' setter x '''
 
     @x.setter
     def x(self, value):
+        ''' x '''
         if type(value) is not int:
             raise TypeError("x must be an integer")
         elif value < 0:
@@ -66,12 +73,14 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        ''' y '''
         return self.__y
 
     ''' setter y '''
 
     @y.setter
     def y(self, value):
+        ''' y '''
         if type(value) is not int:
             raise TypeError("y must be an integer")
         elif value < 0:
@@ -81,11 +90,13 @@ class Rectangle(Base):
     ''' area '''
 
     def area(self):
+        ''' area '''
         return self.height * self.width
 
     ''' display '''
 
     def display(self):
+        ''' display '''
         are = self.height * self.width
         c = 1
         sp = " " * self.x
@@ -103,6 +114,7 @@ class Rectangle(Base):
     ''' str '''
 
     def __str__(self):
+        ''' __str__ '''
         a = self.id
         b = self.x
         c = self.y
@@ -113,6 +125,7 @@ class Rectangle(Base):
     ''' update '''
 
     def update(self, *args):
+        ''' update '''
         c = 1
         for i in args:
             if c == 1:
