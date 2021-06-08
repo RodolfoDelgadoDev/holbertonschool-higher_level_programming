@@ -29,7 +29,7 @@ class TestBase(unittest.TestCase):
 
     ''' Test Task 1 '''
 
-     def test_BaseEmpty(self):
+    def test_BaseEmpty(self):
         ''' test '''
         b = Base()
         self.assertEqual(b.id, 1)
