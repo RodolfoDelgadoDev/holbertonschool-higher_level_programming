@@ -4,6 +4,7 @@
 import unittest
 from models.base import Base
 
+
 class TestBase(unittest.TestCase):
     ''' Test Task 1 '''
     def test_BaseT0(self):
