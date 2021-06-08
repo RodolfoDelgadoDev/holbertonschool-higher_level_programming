@@ -93,3 +93,13 @@ class Rectangle(Base):
                 c += 1
             else:
                 print("#", end="")
+
+    ''' str '''
+
+    def __str__(self):
+        a = self.id
+        b = self.x
+        c = self.y
+        d = self.width
+        e = self.height
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(a, b, c, d, e))
