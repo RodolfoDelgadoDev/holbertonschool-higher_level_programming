@@ -81,3 +81,15 @@ class Rectangle(Base):
 
     def area(self):
         return self.height * self.width
+
+    ''' display '''
+
+    def display(self):
+        are = self.height * self.width
+        c = 1
+        for i in range(1, are + 1):
+            if self.width * c == i:
+                print("#")
+                c += 1
+            else:
+                print("#", end="")
