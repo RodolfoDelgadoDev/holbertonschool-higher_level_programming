@@ -6,4 +6,4 @@ function fautismo (num) {
     return num * fautismo(num - 1);
   }
 }
-console.log(fautismo(isNaN(process.argv[2])));
+console.log(fautismo(process.argv[2]));
