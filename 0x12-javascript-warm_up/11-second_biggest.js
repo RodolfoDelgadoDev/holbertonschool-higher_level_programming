@@ -10,6 +10,8 @@ if (isNaN(args[3])) {
     if (max < args[pichu]) {
       secmax = max;
       max = args[pichu];
+    } else if (secmax < args[pichu]) {
+      secmax = args[pichu];
     }
     pichu++;
   }
