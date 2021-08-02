@@ -3,16 +3,19 @@ const args = process.argv;
 if (isNaN(args[3])) {
   console.log(0);
 } else {
-  let pichu = 3;
-  let max = args[2];
-  let secmax = args[3];
+  let pichu = 2;
+  let max = parseInt(args[2]);
+  let secmax = parseInt(args[3]);
   while (!isNaN(args[pichu])) {
-    if (max < args[pichu]) {
+    if (max < parseInt(args[pichu])) {
       secmax = max;
-      max = args[pichu];
-    } else if (secmax < args[pichu] && max != args[pichu]) {
-      secmax = args[pichu];
-    }
+      max = parseInt(args[pichu]);
+    } else if (secmax < parseInt(args[pichu])) {  
+        if (max == parseInt(args[pichu])){
+          continue;
+        }
+        secmax = parseInt(args[pichu]);
+      }
     pichu++;
   }
   console.log(secmax);
