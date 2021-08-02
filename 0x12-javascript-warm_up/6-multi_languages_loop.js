@@ -1,6 +1,7 @@
 #!/usr/bin/node
-let elem = 2;
-while (elem < process.argv.length) {
-  console.log(process.argv[elem]);
+const lista = ['C is fun', 'Python is cool', 'JavaScript is amazing'];
+let elem = 0;
+while (elem < lista.length) {
+  console.log(lista[elem]);
   elem = elem + 1;
 }
