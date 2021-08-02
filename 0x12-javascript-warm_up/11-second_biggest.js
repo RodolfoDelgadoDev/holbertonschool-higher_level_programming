@@ -12,11 +12,12 @@ if (isNaN(args[3])) {
       max = parseInt(args[pichu]);
     } else if (secmax < parseInt(args[pichu])) {  
         if (max == parseInt(args[pichu])){
+          pichu++;
           continue;
         }
         secmax = parseInt(args[pichu]);
       }
-    pichu++;
+      pichu++;
   }
   console.log(secmax);
 }
