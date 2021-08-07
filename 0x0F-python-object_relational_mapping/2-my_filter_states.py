@@ -13,7 +13,7 @@ if __name__ == "__main__":
 
     '''Take the table and execute commands with execute() method'''
     constable = "SELECT * FROM states WHERE name "
-    constable += "LIKE BINARY '" + sys.argv[4] + "' ORDER BY id ASC"
+    constable += "LIKE BINARY '{}' ORDER BY id ASC".format(sys.argv[4])
     cursor.execute(constable)
 
     '''Get the results with method fetchall()'''
