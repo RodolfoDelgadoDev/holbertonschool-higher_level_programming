@@ -13,8 +13,8 @@ cuar = sys.argv[4]
 cursor = database.cursor()
 
 '''Consulte the table and execute commands with execute() method'''
-cursor.execute("SELECT * FROM states WHERE name = %s ORDER BY id ASC",
-               {sys.argv[4]})
+cursor.execute("SELECT * FROM states WHERE name = %(u)s ORDER BY id ASC",
+               {'u': sys.argv[4]})
 
 '''Get the results with method fetchall()'''
 
