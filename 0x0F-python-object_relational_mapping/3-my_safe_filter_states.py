@@ -4,9 +4,9 @@ import MySQLdb
 import sys
 
 '''Open database conection'''
-if __name__ = "__main__":
+if __name__ == "__main__":
     database = MySQLdb.connect("localhost", sys.argv[1],
-                               sys.argv[2], sys.argv[3], port=3306)
+                            sys.argv[2], sys.argv[3], port=3306)
 
     cuar = sys.argv[4]
     '''Cursor object with cursor() method'''
@@ -14,7 +14,7 @@ if __name__ = "__main__":
 
     '''Consulte the table and execute commands with execute() method'''
     cursor.execute("SELECT * FROM states WHERE name = %(n)s ORDER BY id ASC",
-                   {'n': sys.argv[4]})
+                {'n': sys.argv[4]})
 
     '''Get the results with method fetchall()'''
 
