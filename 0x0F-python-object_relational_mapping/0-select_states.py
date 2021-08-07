@@ -6,7 +6,8 @@ import sys
 '''Open database conection'''
 
 if __name__ == "__main__":
-    database = MySQLdb.connect("localhost", sys.argv[1], sys.argv[2], sys.argv[3], port=3306)
+    database = MySQLdb.connect("localhost", sys.argv[1], sys.argv[2],
+                               sys.argv[3], port=3306)
 
     '''Cursor object with cursor() method'''
     cursor = database.cursor()
