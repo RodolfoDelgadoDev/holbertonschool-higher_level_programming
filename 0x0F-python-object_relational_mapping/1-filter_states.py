@@ -4,7 +4,7 @@ import MySQLdb
 import sys
 
 '''Open database conection'''
-if __name__ = "__main__":
+if __name__ == "__main__":
     database = MySQLdb.connect("localhost", sys.argv[1],
                                sys.argv[2], sys.argv[3], port=3306)
 
