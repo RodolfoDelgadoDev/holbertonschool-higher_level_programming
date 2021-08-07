@@ -5,27 +5,28 @@ import sys
 
 '''Open database conection'''
 
-database = MySQLdb.connect("localhost", sys.argv[1],
-                           sys.argv[2], sys.argv[3], port=3306)
+if _name__ == "__main__":
+    database = MySQLdb.connect("localhost", sys.argv[1], sys.argv[2],
+                               sys.argv[3], port=3306)
 
-'''Cursor object with cursor() method'''
-cursor = database.cursor()
+    '''Cursor object with cursor() method'''
+    cursor = database.cursor()
 
-'''Take the table and execute commands with execute() method'''
-constable = """SELECT *
-        FROM states
-        ORDER BY id ASC"""
+    '''Take the table and execute commands with execute() method'''
+    constable = """SELECT *
+            FROM states
+            ORDER BY id ASC"""
 
-cursor.execute(constable)
+    cursor.execute(constable)
 
-'''Get the results with method fetchall()'''
+    '''Get the results with method fetchall()'''
 
-results = cursor.fetchall()
+    results = cursor.fetchall()
 
-'''Print the results'''
+    '''Print the results'''
 
-for raw in results:
-    print(raw)
+    for raw in results:
+        print(raw)
 
-'''Disconect'''
-database.close()
+    '''Disconect'''
+    database.close()
